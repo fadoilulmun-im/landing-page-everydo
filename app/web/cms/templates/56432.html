@@ -1,5 +1,17 @@
 <>
-  <effect meta={{}} run={async () => {}} />
+  <effect
+    meta={{}}
+    run={async () => {
+      $("#scroll").click(function () {
+        $("html, body").animate(
+          {
+            scrollTop: $("#scrollTop").offset().top,
+          },
+          2000
+        );
+      });
+    }}
+  />
   <>
     <div
       class={`flex flex-col space-y-8 items-start justify-start pt-6 pb-5 bg-white`}
@@ -20,9 +32,12 @@
             manage your day-to-day things to do. EveryDo is free service for
             organization, non-profits and anyone with personal account
           </div>
-          <div class="flex self-stretch flex-col items-center justify-center pt-6 bg-white">
+          <div
+            class={`flex self-stretch flex-col items-center justify-center pt-6 bg-white`}
+          >
             <div
               class={`flex items-center justify-center px-6 py-4 bg-sky-600 border rounded-2xl border-white cursor-pointer`}
+              id="scroll"
             >
               <div class="text-2xl font-bold leading-10 text-center text-white">
                 Let’s Do
@@ -31,8 +46,9 @@
           </div>
           <img
             src="/fimgs/205_330.x2.png"
-            class="flex self-stretch flex-col items-start justify-start px-2.5 pt-6 pb-2.5"
-            style="width: 295px; min-width: 295px; max-width: 295px; height: 449px; min-height: 449px; max-height: 449px;"
+            class={`flex self-stretch flex-col items-start justify-start px-2.5 pt-6 pb-2.5`}
+            style={`width: 295px; min-width: 295px; max-width: 295px; height: 449px; min-height: 449px; max-height: 449px;`}
+            id="scrollTop"
           />
         </div>
       </div>
@@ -126,7 +142,7 @@
       <img
         class={`flex self-stretch items-start justify-start p-6`}
         style={`width: 375px; min-width: 375px; max-width: 375px; height: 734px; min-height: 734px; max-height: 734px;background-image: url('/fimgs/bg-d6a9fb583bdb2507c84f4ccee8d886a535cca150');background-size:100% 100%;background-repeat:no-repeat;`}
-        src="/fimgs/205_1828.x2.png"
+        src="/fimgs/219_2466.x2.png"
       />
       <div class={`flex self-stretch flex-col items-start justify-start px-6`}>
         <div class="flex self-stretch flex-col space-y-4 items-start justify-start px-6 py-4">
