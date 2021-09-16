@@ -29,15 +29,19 @@
           </div>
         </div>
       </div>
-      <div class="flex self-stretch space-x-2.5 items-start justify-start pl-20">
+      <div
+        class={`flex self-stretch space-x-2.5 items-start justify-start pl-20`}
+      >
         <div class="flex flex-1 self-stretch flex-col space-y-4 items-start justify-center pl-6 pt-20 pb-32">
-          <div class="text-6xl font-bold leading-10 text-sky-600">EveryDo!</div>
+          <div class={`text-6xl font-bold leading-10 text-sky-600 pb-10`}>
+            EveryDo!
+          </div>
           <div class="text-lg leading-7">
             EveryDo is a task management app to help you stay organized and
             manage your day-to-day things to do. EveryDo is free service for
             organization, non-profits and anyone with personal account
           </div>
-          <div class="flex flex-col items-start justify-start pt-6 bg-white">
+          <div class={`flex flex-col items-start justify-start pt-6 bg-white`}>
             <div
               class={`flex items-start justify-start px-6 py-4 bg-sky-600 border rounded-2xl border-white cursor-pointer`}
               onClick={meta.action.toView}
