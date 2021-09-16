@@ -4,9 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
-html,
 body,
+html,
 #root {
+  font-family: sofia-pro,sans-serif;
   padding: 0px;
   margin: 0px;
   width: 100%;
