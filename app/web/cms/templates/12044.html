@@ -1,7 +1,20 @@
 <>
-  <effect meta={{}} run={async () => {}} />
+  <effect
+    meta={{}}
+    run={async () => {
+      meta.action = {
+        toView: () => {
+          document.querySelector(".productive").scrollIntoView({
+            behavior: "smooth",
+          });
+        },
+      };
+    }}
+  />
   <>
-    <div class="flex flex-col space-y-8 items-start justify-start pt-6 bg-white">
+    <div
+      class={`flex self-stretch flex-col space-y-8 items-start justify-start pt-6 bg-white`}
+    >
       <div class="flex self-stretch items-center justify-start px-20">
         <div class="flex flex-1 flex-col items-start justify-center px-6 py-4">
           <div class="text-4xl font-bold leading-10">EveryDo!</div>
@@ -25,7 +38,10 @@
             organization, non-profits and anyone with personal account
           </div>
           <div class="flex flex-col items-start justify-start pt-6 bg-white">
-            <div class="flex items-start justify-start px-6 py-4 bg-sky-600 border rounded-2xl border-white">
+            <div
+              class={`flex items-start justify-start px-6 py-4 bg-sky-600 border rounded-2xl border-white cursor-pointer`}
+              onClick={meta.action.toView}
+            >
               <div class="text-2xl font-bold leading-10 text-white">
                 Let’s Do
               </div>
@@ -38,8 +54,14 @@
           style="width: 749px; min-width: 749px; max-width: 749px; height: 602px; min-height: 602px; max-height: 602px;"
         />
       </div>
-      <div class="flex self-stretch items-start justify-start px-20" />
-      <div class="flex self-stretch items-center justify-center px-20">
+      <img
+        class={`flex items-center justify-center px-20`}
+        style={`[style]`}
+        src="/fimgs/101_309.x1.png"
+      />
+      <div
+        class={`flex self-stretch items-center justify-center px-20 productive`}
+      >
         <div class="flex flex-1 items-center justify-center px-20">
           <div class="flex flex-1 flex-col items-center justify-center px-16 py-6">
             <div class="text-5xl font-bold leading-10 text-center">
@@ -119,13 +141,13 @@
           <img
             src="/fimgs/101_394.x3.png"
             class="flex flex-1 flex-col items-start justify-start py-16 pl-16"
-            style="width: 620px; min-width: 620px; max-width: 620px; height: 621px; min-height: 621px; max-height: 621px;"
+            style="width: 652px; min-width: 652px; max-width: 652px; height: 621px; min-height: 621px; max-height: 621px;"
           />
         </div>
       </div>
       <div
-        class="flex self-stretch items-start justify-start px-20"
-        style="height: 482px; min-height: 482px; max-height: 482px;background-image: url('/fimgs/bg-d6a9fb583bdb2507c84f4ccee8d886a535cca150');background-size:100% 100%;background-repeat:no-repeat;"
+        class={`flex self-stretch items-center justify-center px-20 overflow-hidden`}
+        style={`height: 482px; min-height: 482px; max-height: 482px;background-image: url('/fimgs/bg-d6a9fb583bdb2507c84f4ccee8d886a535cca150');background-size:100% 100%;background-repeat:no-repeat;`}
       >
         <div class="flex flex-1 self-stretch flex-col space-y-4 items-center justify-center pl-6 pt-20 pb-32">
           <div class="text-6xl font-bold leading-10 text-center text-white">
